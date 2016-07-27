@@ -31,7 +31,7 @@ def set_lot(new):
 	COORDS_LONGITUDE= f2i(new)
 	
 def set_location(location_name):
-	geolocator = GoogleV3()
+	geolocator = GoogleV3(scheme='http')
 	loc = geolocator.geocode(location_name)
 
 	print('[!] Your given location: {}'.format(loc.address.encode('utf-8')))
